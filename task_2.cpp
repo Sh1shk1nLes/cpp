@@ -26,9 +26,6 @@ public:
             data[size] = value;
             size++;
         }
-        else {
-            std::overflow_error("—тек переполнен");
-        }
     }
 
     void pop() {
@@ -50,7 +47,6 @@ public:
 };
 
 int main() {
-    setlocale(LC_ALL, "ru");
     
     StackArr myStack(5);
 
@@ -59,7 +55,7 @@ int main() {
     myStack.push(3);
     myStack.push(4);
     myStack.push(5);
-    myStack.push(6); //проверка выхода за размерность
+    myStack.push(6);
 
     myStack.display();
 
@@ -75,7 +71,7 @@ int main() {
 
     myStack.display();
 
-    myStack.pop(); //проверка удалени€ элемента пустого стека
+    myStack.pop();
 
     myStack.display();
 }
